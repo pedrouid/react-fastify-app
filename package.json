@@ -1,0 +1,33 @@
+{
+  "name": "react-fastify-app",
+  "description": "React App with Fastify Proxy Server",
+  "version": "0.5.0",
+  "private": true,
+  "scripts": {
+    "clean:server": "cd ./server && npm run clean:all",
+    "clean:client": "cd ./client && npm run clean:all",
+    "clean": "concurrently \"npm run clean:server\" \"npm run clean:server\"",
+    "bootstrap:server": "cd ./server && npm install",
+    "bootstrap:client": "cd ./client && npm install",
+    "bootstrap": "npm install && concurrently \"npm run bootstrap:server\" \"npm run bootstrap:client\"",
+    "build:server": "cd ./server && npm run build",
+    "build:client": "cd ./client && npm run build",
+    "build": "concurrently \"npm run build:server\" \"npm run build:client\"",
+    "dev:server": "cd ./server && npm run dev",
+    "dev:client": "cd ./client && npm run start",
+    "dev": "NODE_ENV=development concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "deploy:server": "cd ./server && npm run deploy",
+    "deploy": "npm run build && npm run deploy:server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrouid/react-fastify-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pedrouid/react-fastify-app/issues"
+  },
+  "homepage": "https://github.com/pedrouid/react-fastify-app#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}

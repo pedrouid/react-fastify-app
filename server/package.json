@@ -9,7 +9,7 @@
     "fastify": "^2.4.1",
     "fastify-cors": "^2.1.3",
     "fastify-helmet": "^3.0.0",
-    "fastify-static": "^2.4.0"
+    "fastify-static": "^4.2.4"
   },
   "scripts": {
     "clean:build": "rm -rf build",
